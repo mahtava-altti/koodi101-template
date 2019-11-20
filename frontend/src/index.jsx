@@ -14,6 +14,7 @@ const getGreetingFromBackend = async () => {
     const url = `${baseURL}/api/greeting`
     console.log("Getting greeting from "+url)
     const response = await fetch(url);
+    console.log(response);
     return response.json()
   } catch (error) {
     console.error(error);
