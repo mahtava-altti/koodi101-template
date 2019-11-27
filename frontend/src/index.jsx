@@ -43,6 +43,7 @@ class App extends Component {
   async componentWillMount() {
     const response = await getGreetingFromBackend();
     this.setState({data: response.results[response.results.length - 1]});
+    document.body.style.backgroundColor='rgb('+this.state.data.red.toString()+','+this.state.data.green.toString()+','+this.state.data.blue.toString()+')';
   }
 
   render() {
