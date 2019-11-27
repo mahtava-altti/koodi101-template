@@ -16,7 +16,7 @@ exports.list = async (ctx) => {
 exports.create = async (ctx) => {
   const params = ctx.request.body;
 
-  const chat = await database.Chat.create({pressure: params.pressure,temperature: params.temperature});
+  const chat = await database.Chat.create({pressure: params.pressure,temperature: params.temperature, light:params.light,red:params.rgb[0],green:params.rgb[1],blue:params.rgb[2]});
 
   ctx.body = await chat.toJSON();
   ctx.status = 201;

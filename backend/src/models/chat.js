@@ -4,6 +4,10 @@ var sequelize = require('./sequelize');
 var ChatMessage = sequelize.define('chats', {
   temperature: Sequelize.TEXT,
   pressure: Sequelize.TEXT,
+  light: Sequelize.TEXT,
+  red: Sequelize.INTEGER,
+  green: Sequelize.INTEGER,
+  blue: Sequelize.INTEGER,
 }, {
   timestamps: true,
   instanceMethods: {
@@ -15,6 +19,10 @@ var ChatMessage = sequelize.define('chats', {
         createdAt: this.createdAt,
         temperature: this.temperature,
 	pressure: this.pressure,
+	light: this.light,
+	red: this.red,
+	green: this.green,
+	blue: this.blue,
       };
     },
   },
